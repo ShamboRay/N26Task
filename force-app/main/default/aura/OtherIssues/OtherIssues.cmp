@@ -1,0 +1,42 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" controller="OtherIssuesCtrlr">
+<aura:attribute name="PaginationList2" type="Case[]"/>
+<aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    
+	
+    <!-- data table start-->  
+            <table class="slds-table slds-table_bordered slds-table_cell-buffer">
+                <thead>
+                    <tr class="slds-text-title_caps">
+                        
+                        <th scope="col">
+                            <div class="slds-truncate" title="Case">Case Number</div>
+                        </th>
+                        <th scope="col">
+                            <div class="slds-truncate" title="Contact Name">Contact Name</div>
+                        </th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+					<aura:iteration items="{!v.PaginationList2}" var="item">
+                        <tr>
+                            
+                            <th scope="row">
+                                <div class="slds-truncate" title="{!item.CaseNumber}">
+                                    {!item.CaseNumber}
+                                </div>
+                            </th> 
+                            <th scope="row">
+                                <div class="slds-truncate" title="{!item.Name}">
+                                    {!item.Name}
+                                </div>
+                            </th>
+                            
+                            
+                        </tr>
+					</aura:iteration>	
+                </tbody>
+            </table>
+    
+    
+</aura:component>

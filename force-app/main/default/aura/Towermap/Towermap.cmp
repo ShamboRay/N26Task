@@ -1,0 +1,30 @@
+<aura:component implements="flexipage:availableForAllPageTypes" controller="TowerMapControllerClass" access="global" >
+     <aura:attribute name="mapMarkers" type="Object" access="PRIVATE" />
+     <aura:attribute name="markersTitle" type="String" access="PRIVATE" />
+     <aura:handler name="init" value="{!this}" action="{!c.handleInit}"/>
+ 		<div class="slds-float_right">
+                <lightning:button variant="brand" label="Download" iconName="utility:download" iconPosition="left" onclick="{! c.handleClick }" />
+		</div>
+     <aura:if isTrue="{!!empty(v.mapMarkers)}" >
+          <!-- Create lightning:map here -->
+         <!--<div width="10px" height="10px">
+         <lightning:map markersTitle="{!v.markersTitle}"
+                        mapMarkers="{! v.mapMarkers }" 
+                        zoomLevel="5" />
+		</div> -->        
+         <lightning:card class="slds-size_1-of-3" variant="Narrow" title="Payment Info" iconName="standard:account" footer="Card Footer">
+             <aura:set attribute="actions">
+                 <lightning:buttonIcon iconName="utility:down" variant="border-filled" alternativeText="Show More"/>
+             </aura:set>
+             <img class="slds-align_absolute-center" src="{!$Resource.cvv}"/>
+            
+    		
+
+         </lightning:card>
+         	
+     </aura:if>
+    
+
+    
+
+</aura:component>

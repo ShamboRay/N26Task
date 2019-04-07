@@ -1,0 +1,41 @@
+<aura:component implements="force:appHostable,force:hasRecordId,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction"  controller="OpenissuesCtrlr" access="global" >
+<aura:attribute name="PaginationList" type="Contact"/>
+<aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    
+	
+    <!-- data table start-->  
+            <table class="slds-table slds-table_bordered slds-table_cell-buffer">
+                <thead>
+                    <tr class="slds-text-title_caps">
+                        
+                        <th scope="col">
+                            <div class="slds-truncate" title="Product">Product Name</div>
+                        </th>
+                        <th scope="col">
+                            <div class="slds-truncate" title="Home Country">Home Country</div>
+                        </th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+					
+                        <tr>
+                            
+                            <th scope="row">
+                                <div class="slds-truncate" title="{!v.PaginationList.Product__c}">
+                                    {!v.PaginationList.Product__c}
+                                </div>
+                            </th> 
+                            <th scope="row">
+                                <div class="slds-truncate" title="{!v.PaginationList.Home_Country__c}">
+                                    {!v.PaginationList.Home_Country__c}
+                                </div>
+                            </th>
+                            
+                            
+                        </tr>
+
+                </tbody>
+            </table>
+
+</aura:component>

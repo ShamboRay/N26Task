@@ -1,0 +1,64 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" controller="ProductInfo" access="global" >
+<aura:attribute name="PaginationList" type="Product2[]"/>
+<aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    
+	
+    <!-- data table start-->  
+    <div style="width:8px;text-align: center;">
+            <table style="width:8px" class="slds-table slds-table_bordered slds-table_cell-buffer" >
+                <thead>
+                    <tr class="slds-text-title_caps">
+                        
+                        <th scope="col">
+                            <div class="slds-truncate" title="Product">Product Name</div>
+                        </th>
+                        <th scope="col">
+                            <div class="slds-truncate" title="Home Country">Home Country</div>
+                        </th>
+                        <th scope="col">
+                            <div class="slds-truncate" title="Cost per Calendar Month">Cost per Calendar Month</div>
+                        </th>
+                        <th scope="col">
+                            <div class="slds-truncate" title="Card Replacement Cost">Card Replacement Cost</div>
+                        </th>
+                        <th scope="col">
+                            <div class="slds-truncate" title="ATM Fee in other currencies">ATM Fee</div>
+                        </th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+					<aura:iteration items="{!v.PaginationList}" var="item">
+                        <tr>
+                            
+                            <th scope="row">
+                                <div class="slds-truncate" title="{!item.Name}">
+                                    {!item.Name}
+                                </div>
+                            </th> 
+                            <th scope="row">
+                                <div class="slds-truncate" title="{!item.Home_Country__c}">
+                                    {!item.Home_Country__c}
+                                </div>
+                            </th>
+                            <th scope="row">
+                                <div class="slds-truncate" title="{!item.Cost_per_Calendar_Month__c}">
+                                    <lightning:formattedNumber value="{! item.Cost_per_Calendar_Month__c }" style="currency"  currencyCode="EUR"  currencyDisplayAs="symbol"/>
+                                </div>
+                            </th>
+                            <th scope="row">
+                                <div class="slds-truncate" title="{!item.Card_Replacement_Cost__c}">
+                                    <lightning:formattedNumber value="{! item.Card_Replacement_Cost__c }" style="currency"  currencyCode="EUR"  currencyDisplayAs="symbol"/>
+                                </div>
+                            </th>
+                            <th scope="row">
+                                <div class="slds-truncate" title="{!item.ATM_Fee_in_other_currencies__c}">
+                                    <lightning:formattedNumber value="{! item.ATM_Fee_in_other_currencies__c }" style="percent"  />
+                                </div>
+                            </th>
+                        </tr>
+                    </aura:iteration>
+                </tbody>
+            </table>
+        </div>
+</aura:component>
