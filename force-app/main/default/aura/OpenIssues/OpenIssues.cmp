@@ -1,3 +1,8 @@
+<!--
+
+****This Component Displays The Contact Product Name And Home Country****
+@Author : Shambo Ray
+-->
 <aura:component implements="force:appHostable,force:hasRecordId,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction"  controller="OpenissuesCtrlr" access="global" >
 <aura:attribute name="PaginationList" type="Contact"/>
 <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
