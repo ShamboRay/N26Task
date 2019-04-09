@@ -1,3 +1,11 @@
+<!--
+
+****This Component Displays The Contacts Product Information In Detail***
+@Controller : ProductInfo
+@Author : Shambo Ray
+-->
+
+
 <aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" controller="ProductInfo" access="global" >
 <aura:attribute name="PaginationList" type="Product2[]"/>
 <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
