@@ -1,3 +1,9 @@
+/**This Class Contains The Batch Functionality Of Survey Email Sending
+@TestClass :  SendSurveysBatchTest.cls
+This Class Can schedule it self              
+
+**/
+
 public with sharing class SendSurveyBatch implements Database.Batchable<Contact>, Schedulable, Database.AllowsCallouts {
 	public static final Integer EMAILS_PER_BATCH = 100;
 	public static Map<Id,Contact> conIdToContact = new Map<Id,Contact> ();
