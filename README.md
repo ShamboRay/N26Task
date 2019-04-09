@@ -18,7 +18,13 @@ TestForOpenIssueAndProdInfo.cls  -- It contains all the test scenarios of the li
 SendSurveysBatchTest.cls  -- It tests the batch job functionality
 
 ## Resources
-
+**Important**
+Lightning Implementation
+1.Please See The ProductInfo component to see the product info in the case page layout
+2.Please see the OpenIssues compoennt to see the contact's product name and home country
+3.Please see the OtherIssues component to see the contact's other cases in the case page layout
+Batch Class Implementation
+Please see the SendSurveyBatch class for bulk email send for survey functionality
 
 ## Description of Files and Directories
 Lightning Components For 
