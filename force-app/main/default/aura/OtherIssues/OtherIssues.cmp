@@ -1,3 +1,10 @@
+<!--
+
+****This Component Displays The Contacts other cases info on case page layout***
+@controller: OtherIssuesCtrlr
+@Author : Shambo Ray
+-->
+
 <aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" controller="OtherIssuesCtrlr">
 <aura:attribute name="PaginationList2" type="Case[]"/>
 <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
